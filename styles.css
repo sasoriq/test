@@ -1,0 +1,137 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main-container {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.item {
+  font: 900 60px "Roboto", sans-serif;
+  color: #fff;
+  text-align: center;
+  text-shadow: 4px 2px 0 rgba(0, 0, 0, 0.2);
+  border: 1px solid #000;
+  margin: 1px 1px 0 0;
+}
+
+.item-1 h1 {
+  color: rgb(7, 94, 42);
+}
+
+.item-2 {
+  background: linear-gradient(45deg, #84fab0, #8fd3f4);
+}
+
+.item-3 {
+  background: linear-gradient(45deg, #a6c0fe, #f68084);
+}
+
+.item-4 {
+  background: linear-gradient(45deg, #d4fc79, #96e6a1);
+}
+
+.item-2,
+.item-3,
+.item-4 {
+  flex: 1 1 calc(100% / 3 - 1px);
+}
+
+.item-3 {
+  border: 1px dashed #000;
+}
+
+.second-container,
+.third-container {
+  display: flex;
+}
+
+.item-5 {
+  flex: 1 1 calc(100% / 3 - 1px);
+}
+
+.item-6 {
+  flex: 2 1 calc(100% - 100% / 3 - 1px);
+}
+
+@media screen and (max-width: 650px) {
+
+  .second-container,
+  .third-container {
+    flex-direction: column;
+  }
+}
+
+.btn-left {
+  background-color: yellow;
+  color: #000;
+}
+
+.btn-left:hover,
+.btn-left:focus,
+.btn-left:visited {
+  background-color: rgba(255, 255, 0, 0.8);
+  color: #000;
+}
+
+.btn-right {
+  background-color: green;
+  color: #fff;
+}
+
+.btn-right:hover,
+.btn-right:focus,
+.btn-right:visited {
+  background-color: rgba(0, 128, 0, 0.8);
+  color: #fff;
+}
+
+.modal-window {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  top: 0;
+  left: 0;
+  color: #fff;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.modal-window.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-window__body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 10px;
+}
+
+.modal-window__content {
+  background-color: #fff;
+  color: #000;
+  max-width: 800px;
+  padding: 30px;
+  position: relative;
+}
+
+.modal-window__close {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  font-size: 15px;
+  color: #000;
+  text-decoration: none;
+}
+
+.modal-window__close:hover {
+  text-decoration: none;
+}
